@@ -5,7 +5,7 @@ using TTLLibrary;
 
 namespace Oscilloscope
 {
-	public partial class frmMain : Form
+	public partial class MainForm : Form
 	{
 		private FullAdder adder1Circuit = new FullAdder(TTLGateTypeEnum.Perfect);
 		private SignalGenerator signalGenerator1 = new SignalGenerator();
@@ -15,7 +15,7 @@ namespace Oscilloscope
 		private SRLatch srLatch = new SRLatch(TTLGateTypeEnum.Normal);
 		private JKMasterSlave jkFlipFlop = new JKMasterSlave(TTLGateTypeEnum.Normal);
 
-		public frmMain()
+		public MainForm()
 		{
 			InitializeComponent();
 
@@ -25,7 +25,7 @@ namespace Oscilloscope
 			SimulateJKFlipFlop();
 		}
 
-		private void frmMain_Paint(object sender, PaintEventArgs e)
+		private void OnPaint(object sender, PaintEventArgs e)
 		{
 			//FalstadPaint();
 			//FullAdderPaint();

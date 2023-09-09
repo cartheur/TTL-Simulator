@@ -1,6 +1,6 @@
 ﻿namespace Oscilloscope
 {
-	partial class frmMain
+	partial class MainForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -38,7 +38,7 @@
 			this.ClientSize = new System.Drawing.Size(1698, 639);
 			this.Name = "frmMain";
 			this.Text = "Oscilloscope";
-			this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmMain_Paint);
+			this.Paint += new System.Windows.Forms.PaintEventHandler(this.OnPaint);
 			this.ResumeLayout(false);
 
 		}
