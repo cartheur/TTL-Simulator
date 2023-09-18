@@ -13,6 +13,7 @@ namespace LogicConsole
 
 		static void Main(string[] args)
 		{
+			TwoBitAdder();
 		}
 
 		private static void SaveJEDECFileTest()
