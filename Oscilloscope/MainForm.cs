@@ -25,14 +25,6 @@ namespace Oscilloscope
 			SimulateJKFlipFlop();
 		}
 
-		private void OnPaint(object sender, PaintEventArgs e)
-		{
-			//FalstadPaint();
-			//FullAdderPaint();
-			//SRLatchPaint();
-			JKFlipFlopPaint();
-		}
-
 		private void SimulateJKFlipFlop()
 		{
 			bool signalHigh = true;
@@ -61,7 +53,6 @@ namespace Oscilloscope
 
 			jkFlipFlop.RunCircuit();
 		}
-
 		private void JKFlipFlopPaint()
 		{
 			Graphics g = this.CreateGraphics();
@@ -142,7 +133,6 @@ namespace Oscilloscope
 				
 			}
 		}
-
 		private void SimulateSRLatch()
 		{
 			bool carryInSignalHigh = true;
@@ -181,7 +171,6 @@ namespace Oscilloscope
 
 			srLatch.RunCircuit();
 		}
-
 		private void SRLatchPaint()
 		{
 			Graphics g = this.CreateGraphics();
@@ -239,7 +228,6 @@ namespace Oscilloscope
 				*/
 			}
 		}
-
 		private void SimulateFalstadCircuit()
 		{
 			bool carryInSignalHigh = false;
@@ -259,7 +247,6 @@ namespace Oscilloscope
 
 			falstadCircuit.RunCircuit();
 		}
-
 		private void FalstadPaint()
 		{
 			Graphics g = this.CreateGraphics();
@@ -301,7 +288,6 @@ namespace Oscilloscope
 					Height - ((float)falstadCircuit.Output(i) * 5 + topOffset));
 			}
 		}
-
 		private void SimulateFullAdder()
 		{
 			bool carryInSignalHigh = false;
@@ -338,7 +324,6 @@ namespace Oscilloscope
 
 			adder1Circuit.RunCircuit();
 		}
-
 		private void FullAdderPaint()
 		{
 			Graphics g = this.CreateGraphics();
@@ -391,5 +376,13 @@ namespace Oscilloscope
 					Height - ((float)adder1Circuit.Cout(i) * 5 + topOffset + spacing * 4));
 			}
 		}
-	}
+
+        private void OnPaint(object sender, PaintEventArgs e)
+        {
+            //FalstadPaint();
+            //FullAdderPaint();
+            //SRLatchPaint();
+            JKFlipFlopPaint();
+        }
+    }
 }
